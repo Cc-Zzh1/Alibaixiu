@@ -34,9 +34,9 @@ if(!isLogin)location.href='login.html';
               <h3 class="panel-title">站点内容统计：</h3>
             </div>
             <ul class="list-group">
-              <li class="list-group-item"><strong>10</strong>篇文章（<strong>2</strong>篇草稿）</li>
-              <li class="list-group-item"><strong>6</strong>个分类</li>
-              <li class="list-group-item"><strong>5</strong>条评论（<strong>1</strong>条待审核）</li>
+              <li class="list-group-item" id="post"><strong>10</strong>篇文章（<strong>2</strong>篇草稿）</li>
+              <li class="list-group-item" id="category"><strong>6</strong>个分类</li>
+              <li class="list-group-item" id="comment"><strong>5</strong>条评论（<strong>1</strong>条待审核）</li>
             </ul>
           </div>
         </div>
@@ -60,9 +60,9 @@ if(!isLogin)location.href='login.html';
           <i class="fa fa-thumb-tack"></i>文章<i class="fa fa-angle-right"></i>
         </a>
         <ul id="menu-posts" class="collapse">
-          <li><a href="posts.html">所有文章</a></li>
+          <li><a href="posts.html" >所有文章</a></li>
           <li><a href="post-add.html">写文章</a></li>
-          <li><a href="categories.html">分类目录</a></li>
+          <li><a href="categories.html" >分类目录</a></li>
         </ul>
       </li>
       <li>
@@ -86,5 +86,6 @@ if(!isLogin)location.href='login.html';
   <script src="../assets/vendors/jquery/jquery.js"></script>
   <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script src="../assets/js/common.js"></script>
+  <script src="../assets/js/index.js"></script>
 </body>
 </html>

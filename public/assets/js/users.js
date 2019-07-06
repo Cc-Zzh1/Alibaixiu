@@ -1,4 +1,4 @@
-var userAry=[];
+// var userAry=[];
 $('#userForm').on('submit',function(){
   var formData = $(this).serialize();
   $.ajax({
@@ -126,17 +126,23 @@ $('#deleteMany').on('click',function(){
     if(confirm('确定要删除所有用户？')){
     var arr = []
     var selectAll = $('#userList').find('.status').filter(':checked');
-    selectAll.each(function (index,element) {
+    console.log(selectAll);
+    var a = {a:1,b:2,c:3}
+    console.log(a);
+    
+    selectAll.each(function (index,element,e) {
+      console.log(element);
+      
       console.log($(element).attr('data-id'));
       arr.push($(element).attr('data-id'));
     })
-$.ajax({
-  type:'delete',//get或post
-  url:'/users/' + arr.join('-'),//请求的地址
-  data:{},//如果不需要传，则注释掉 请求的参数，a=1&b=2或{a:1,b:2}或者jq中的serialize方法，或者formData收集
-  success:function(result){//成功的回调函数
-    location.reload();
-  }
-})
+// $.ajax({
+//   type:'delete',//get或post
+//   url:'/users/' + arr.join('-'),//请求的地址
+//   data:{},//如果不需要传，则注释掉 请求的参数，a=1&b=2或{a:1,b:2}或者jq中的serialize方法，或者formData收集
+//   success:function(result){//成功的回调函数
+//     location.reload();
+//   }
+// })
   }
 })
